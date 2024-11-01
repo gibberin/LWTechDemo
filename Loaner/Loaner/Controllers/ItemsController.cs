@@ -25,7 +25,7 @@ namespace Loaner.Controllers
         {
             HttpClient httpClientObj = new HttpClient();
 
-            String itemsJson = await httpClientObj.GetStringAsync("https://localhost:44384/api/itemsinfo");
+            //String itemsJson = await httpClientObj.GetStringAsync("https://localhost:44384/api/itemsinfo");
 
             List<Item> itemList = await _context.Items.ToListAsync();
 
