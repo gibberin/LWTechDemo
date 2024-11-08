@@ -23,10 +23,6 @@ namespace Loaner.Controllers
         // GET: Items
         public async Task<IActionResult> Index()
         {
-            HttpClient httpClientObj = new HttpClient();
-
-            String itemsJson = await httpClientObj.GetStringAsync("https://localhost:44384/api/itemsinfo");
-
             List<Item> itemList = await _context.Items.ToListAsync();
 
             List<ItemView> itemViewList = new List<ItemView>();
